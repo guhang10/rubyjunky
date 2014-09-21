@@ -10,12 +10,10 @@ group :development, :test do
   gem 'sqlite3'
 end
 
- group :production do
-   gem 'pg'
- end
-
-gem 'pg'
-#wrap sqlite3 in pg
+group :production, :staging do
+      gem 'pg'
+      gem 'rails_12factor'
+end
 
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
